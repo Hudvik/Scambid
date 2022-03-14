@@ -228,12 +228,12 @@ function generateAuctionCard(i) {
   tableBody.appendChild(bidRow);
 
   let bidTitle = document.createElement("th");
-  bidTitle.innerHTML = "Current bid:"
+  bidTitle.innerHTML = "Enchère actuelle:"
   bidTitle.scope = "row";
   bidRow.appendChild(bidTitle);
 
   let bid = document.createElement("td");
-  bid.innerHTML = "£-.-- [- bids]"
+  bid.innerHTML = "£-.-- [- enchères]"
   bid.id = "current-bid-" + i
   bidRow.appendChild(bid);
 
@@ -241,7 +241,7 @@ function generateAuctionCard(i) {
   tableBody.appendChild(timeRow);
 
   let timeTitle = document.createElement("th");
-  timeTitle.innerHTML = "Time left:"
+  timeTitle.innerHTML = "Temps restant:"
   timeTitle.scope = "row";
   timeRow.appendChild(timeTitle);
 
@@ -267,7 +267,7 @@ function generateAuctionCard(i) {
   bidButton.type = "button"
   bidButton.href = "#";
   bidButton.classList.add("btn", "btn-primary")
-  bidButton.innerText = "Submit bid";
+  bidButton.innerText = "Enchérir";
   bidButton.onclick = function () { openBid(this.id); }
   bidButton.id = "bid-button-" + i
   buttonGroup.appendChild(bidButton);
